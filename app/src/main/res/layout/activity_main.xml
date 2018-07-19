@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.com.clientapp.MainActivity">
+
+    <include layout="@layout/common_title"/>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_centerVertical="true">
+       <Button
+           android:id="@+id/bt_periphery"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="蓝牙锁"
+           android:textAllCaps="false"
+           android:layout_marginLeft="70dp"/>
+       <Button
+           android:id="@+id/bt_central"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="用户"
+           android:textAllCaps="false"
+           android:layout_marginLeft="50dp"/>
+
+   </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

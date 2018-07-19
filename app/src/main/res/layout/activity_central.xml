@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.com.clientapp.CentralActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/bt_openblue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开蓝牙"
+
+       />
+
+        <Button
+            android:id="@+id/bt_setsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="用户名"/>
+
+        <Button
+            android:id="@+id/bt_setpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="远端密码"/>
+
+        <Button
+            android:id="@+id/bt_setlocalpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地密码"
+            android:layout_marginTop="8dp"/>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始搜索"/>
+        <Button
+            android:id="@+id/bt_showpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示密码"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_connectstat"
+        android:text="状态：未连接"
+        android:textSize="35sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tx_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="默认用户名"
+        android:textSize="30sp"
+        android:textColor="@android:color/holo_red_light"
+        />
+
+    <TextView
+        android:id="@+id/tv_showpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_basicequipmentinformation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设备基本信息"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+
+        <TextView
+            android:id="@+id/tv_rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="信号强度:"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="距离:"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_stat"
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_lockstat"
+                android:text="锁头状态:ff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@android:color/holo_blue_dark"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/bt_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试按钮"/>
+
+
+
+</LinearLayout>

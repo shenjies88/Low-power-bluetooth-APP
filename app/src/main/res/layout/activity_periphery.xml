@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="example.com.clientapp.PeripheryActivity"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginTop="8dp"
+            android:id="@+id/bt_openblue"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="打开蓝牙"
+            />
+        <Button
+            android:id="@+id/bt_showpassword"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="显示密码"/>
+        <Button
+            android:id="@+id/bt_openlock"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="钥匙开锁"
+           />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_connectstat"
+        android:text="状态：未连接"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/tv_showpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="密码"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_connectdevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        >
+        <TextView
+            android:text="连接的用户"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            />
+        <TextView
+            android:id="@+id/tv_devicename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="用户名称"
+            android:textSize="25sp"
+            android:textColor="@android:color/holo_red_light"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tv_lockstat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="锁头状态:关闭"
+
+            android:textSize="15sp"
+            android:textColor="@android:color/holo_blue_dark"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_lock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/close_lock_img"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/lock"
+            android:text="锁头状态:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_below="@+id/iv_lock"
+            android:layout_marginTop="25dp"
+            android:layout_toStartOf="@id/iv_locklight"
+            android:layout_marginRight="5dp"
+            />
+
+        <ImageView
+            android:id="@+id/iv_locklight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_lock"
+            android:layout_marginTop="25dp"
+            android:layout_toStartOf="@+id/iv_lock"
+            android:src="@drawable/light_red" />
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
